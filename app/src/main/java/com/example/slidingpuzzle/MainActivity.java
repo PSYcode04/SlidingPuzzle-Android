@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 loc = 0;
                 click = false;
                 cutImage(image);
+                answer = false;
                 puzzlePiece = new PuzzlePiece[num*num];
                 shufflePiece = new PuzzlePiece[num*num];
 
@@ -102,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 loc = 0;
                 click = false;
                 cutImage(image);
+                answer = false;
                 puzzlePiece = new PuzzlePiece[num*num];
                 shufflePiece = new PuzzlePiece[num*num];
 
@@ -124,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 click = true; // shuffle을 눌렀음을 표시
+                answer = false;
 
                 PuzzleAdapter adapter = new PuzzleAdapter(getApplicationContext(), image, num, puzzlePiece);
                 Collections.shuffle(Arrays.asList(adapter.newPuzzlePiece));
