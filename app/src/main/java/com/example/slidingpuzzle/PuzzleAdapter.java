@@ -6,33 +6,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class PuzzleAdapter extends BaseAdapter {
 
-    protected Bitmap[] gridImage; // 비트맵으로 자른 이미지 넣을 배열?
-    private Context context; // 어플리케이션에 대한 정보를 담는 Context 객체
-    private Bitmap image;   // 전달받을 bitmap 이미지
-    private int num; // 3*3인지 4*4인지 전달받는다.
+    private Context context;
     private int gridSize;
+    protected PuzzlePiece[] newPuzzlePiece;
 
-    public PuzzleAdapter(Context c, Bitmap image, int num) {
+
+    public PuzzleAdapter(Context c, Bitmap image, int num, PuzzlePiece[] puzzlePiece) {
         context = c;
-        this.image = image;
-        this.num = num;
         gridSize = image.getWidth() / num;
-        gridImage = new Bitmap[num * num-1]; // 한 칸은 빈칸으로 만들기 위해 1을 빼준다.
-
-        cutImage();
+        newPuzzlePiece = new PuzzlePiece[num * num];
+        newPuzzlePiece = puzzlePiece.clone();
     }
 
     @Override
     public int getCount() {
-        return gridImage.length;
+        return newPuzzlePiece.length;
     }
 
     @Override
-    public Object getItem(int arg0) {
+    public Object getItem(int position) {
         return null;
     }
 
@@ -43,39 +39,21 @@ public class PuzzleAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-        // 이미지 버튼으로 출력
-        ImageButton imageButton;
+        ImageView imageView;
 
         if(convertView == null){
-            imageButton = new ImageButton(context);
-            imageButton.setLayoutParams(new GridView.LayoutParams(gridSize, gridSize));
-            imageButton.setPadding(0, 0, 0, 0);
+            imageView = new ImageView(context);
+            imageView.setLayoutParams(new GridView.LayoutParams(gridSize, gridSize));
+            imageView.setPadding(0, 0, 0, 0);
 
         }else{
-            imageButton  = (ImageButton) convertView;
+            imageView  = (ImageView) convertView;
         }
-        //이미지버튼에 주어진 위치의 이미지를 설정함
-        imageButton.setImageBitmap(gridImage[position]);
-        imageButton.setId(position);
 
-        return imageButton;
+        imageView.setImageBitmap(newPuzzlePiece[position].getImagePiece());
+        imageView.setId(newPuzzlePiece[position].getIndex());
+
+        return imageView;
     }
-
-    // 이미지 쪼개서 배열에 넣기
-    public void cutImage() {
-        int x, y;
-        int i = 0;
-
-        for (y = 0; y <= (image.getHeight() - image.getHeight() / num); y += image.getHeight() / num) {
-            for (x = 0; x <= (image.getWidth() - image.getWidth() / num); x += image.getWidth() / num, i++) {
-                if(i == num*num-1)
-                    break;
-                gridImage[i] = Bitmap.createBitmap(image, x, y, image.getWidth()/ num, image.getHeight() / num);
-            }
-        }
-    }
-
-
 
 }
