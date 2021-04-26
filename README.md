@@ -1,6 +1,6 @@
 # SlidingPuzzle-Android
 
-## 프로젝트 구성
+## 프로젝트 구성 & 사용 언어
 
 ***
 
