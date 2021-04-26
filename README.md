@@ -18,7 +18,7 @@
 
 ### 1. Select 3×3 or 4×4
 
-![image-20210426154350653](C:\Users\PSY\AppData\Roaming\Typora\typora-user-images\image-20210426154350653.png)
+![image-20210426154350653](https://user-images.githubusercontent.com/71871348/116043330-7c993a80-a6aa-11eb-9288-bf158862a451.png)
 
 - 3×3 혹은  4×4 버튼을 클릭하여 선택할 수 있다.
 
@@ -26,7 +26,8 @@
 
 ### 2. Click SHUFFLE button
 
-![image-20210426155948551](C:\Users\PSY\AppData\Roaming\Typora\typora-user-images\image-20210426155948551.png)
+![image-20210426155948551](https://user-images.githubusercontent.com/71871348/116043519-b9fdc800-a6aa-11eb-9abf-ef59e2780955.png)
+
 
 - SHUFFLE 버튼을 클릭하면 퍼즐이 무작위로 섞인다.
 
@@ -34,7 +35,8 @@
 
 ### 3. Move puzzle
 
-![1](C:\Users\PSY\Desktop\1.gif)
+![gif](https://user-images.githubusercontent.com/71871348/116043013-17454980-a6aa-11eb-9488-243f1d4ae719.gif)
+
 
 - 클릭한 퍼즐 조각 상,하,좌,우에 빈 칸이 있을 경우 이동할 수 있는 퍼즐이다.
 - 따라서 이동할 수 있는 퍼즐을 클릭하면 빈 칸으로 이동한다.
@@ -44,8 +46,7 @@
 
 ### 4. Complete Puzzle
 
-![image-20210426160513705](C:\Users\PSY\AppData\Roaming\Typora\typora-user-images\image-20210426160513705.png)
-
+![image-20210426160513705](https://user-images.githubusercontent.com/71871348/116043367-89b62980-a6aa-11eb-855d-90e1482e5ea7.png)
 
 
 - 섞인 퍼즐을 적절히 이동하여 정답을 맞추면 Toast 메시지를 볼 수 있다.
