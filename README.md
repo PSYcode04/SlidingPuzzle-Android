@@ -1,5 +1,11 @@
 # SlidingPuzzle-Android
 
+## 프로젝트 구성
+- 안드로이드 스튜디오 (Android Studio)
+- JAVA
+
+***
+
 ## 프로젝트 소개
 
 - 이 프로젝트는 '모바일 앱 프로그래밍 실습' 수업의 첫 번째 과제입니다.
